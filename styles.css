@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e4ece9;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+
+  background-color: #e4ece9;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #1f2523;
+}
+
+.logo {
+  margin: 3rem 0 2rem;
+}
+
+main section {
+  display: flex;
+  flex: 1;
+  gap: 1.25rem;
+  padding-bottom: 2rem;
+}
+
+form {
+  background-color: #f9fbfa;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  max-width: 462px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+form h1 {
+  font-size: 1.25rem;
+}
+
+form p {
+  font-size: 0.87rem;
+  color: #4d5c57;
+  margin: 0.75rem 0 2.5rem;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+}
+
+fieldset legend {
+  text-transform: uppercase;
+  font-size: 0.62rem;
+  color: #4d5c57;
+  margin-bottom: 0.5rem;
+}
+
+fieldset:focus-within legend {
+  color: #1f8459;
+  font-weight: 700;
+}
+
+input,
+select {
+  flex: 1;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cdd5d2;
+  padding: 0 1rem;
+  font-size: 0.87rem;
+  color: #1f2523;
+  background-color: transparent;
+  outline: none;
+}
+
+select {
+  appearance: none;
+  background-image: url(img/chevron-down.svg);
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 1.25rem auto;
+}
+
+input::placeholder,
+select:invalid {
+  color: #4d5c57;
+}
+
+input:focus,
+select:focus {
+  border: 1.5px solid #1f8459;
+}
+
+.inputs-row {
+  display: flex;
+  flex: 1;
+
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.inputs-row fieldset:first-child {
+  flex: 1;
+}
+
+.inputs-row fieldset:last-child input {
+  max-width: 154px;
+}
+
+form button {
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 0.87rem;
+  color: #ffffff;
+  background-color: #1f8459;
+  font-weight: 700;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #2cb178;
+}
+
+form button:last-child {
+  margin-top: 2rem;
+}
+
+aside {
+  background-color: #f9fbfa;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  max-width: 462px;
+
+  min-width: 600px;
+}
+
+aside header {
+  display: flex;
+  justify-content: space-between;
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #e4ece9;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+aside header p {
+  color: #4d5c57;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+aside header p span {
+  color: #4d5c57;
+  font-weight: 400;
+  font-size: 0.87rem;
+}
+
+aside header p i {
+  color: #cdd5d2;
+  margin: 0 0.5rem;
+  font-style: normal;
+}
+
+aside header h2 {
+  font-size: 1rem;
+  color: #1f2523;
+}
+
+aside header small {
+  color: #4d5c57;
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin-right: 0.25rem;
+}
+
+aside ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  max-height: 310px;
+  min-height: 310px;
+
+  overflow-y: scroll;
+}
+
+.expense {
+  display: flex;
+  align-items: center;
+  height: 38px;
+}
+
+.expense img:first-child {
+  width: 2rem;
+  height: 2rem;
+
+  margin-right: 0.75rem;
+}
+
+.expense > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.expense-info strong {
+  font-size: 0.87rem;
+  color: #1f2523;
+}
+
+.expense-info span {
+  font-size: 0.75rem;
+  color: #4d5c57;
+}
+
+.expense-amount {
+  font-size: 0.87rem;
+  color: #1f2523;
+  font-weight: 600;
+}
+
+.expense-amount small {
+  font-size: 0.75rem;
+  color: #4d5c57;
+  font-weight: 400;
+  margin-right: 0.25rem;
+}
+
+.remove-icon {
+  height: 1rem;
+  margin-left: 0.5rem;
+
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.remove-icon:hover {
+  opacity: 0.7;
+}
+
+@media (min-width: 1100px) {
+  form {
+    max-height: 428px;
+  }
+}
+
+@media (max-width: 1100px) {
+  :root {
+    font-size: 14px;
+  }
+
+  main,
+  aside {
+    min-width: 100%;
+  }
+
+  main section {
+    flex-direction: column;
+    width: 100%;
+
+    padding: 1.5rem;
+  }
+
+  main section form {
+    min-width: 100%;
+  }
+
+  main section aside ul {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .inputs-row {
+    flex-direction: column;
+  }
+
+  .inputs-row fieldset:last-child input {
+    max-width: auto;
+    min-width: 100%;
+  }
+
+  aside header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
